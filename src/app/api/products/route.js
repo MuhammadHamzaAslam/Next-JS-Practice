@@ -7,13 +7,14 @@ const Data = [
   { title: "Nissan GTR", img: "" },
 ];
 
-export async function GET(request) {
-  return new Response(JSON.stringify(Data, null, 2), {
-    headers: { 'Content-Type': 'application/json' },
-  });
+export async function GET() { 
+  return Response.json(Data);
 }
-export async function POST(request) {
-  return new Response(JSON.stringify(Data, null, 2), {
-    headers: { 'Content-Type': 'application/json' },
-  });
+
+export async function POST(request) { 
+  const newObj = request.json()
+  Data.push(newObj)
+  return Response.json(Data)
 }
+
+
