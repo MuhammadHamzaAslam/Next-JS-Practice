@@ -7,15 +7,12 @@ const Data = [
   { title: "Nissan GTR", img: "" },
 ];
 
-export async function GET() { 
+export async function GET() {
   return Response.json(Data);
 }
 
-export async function POST(request) { 
-  const newObj = await request.json()
-  Data.push(newObj)
-  return Response.json(Data)
+export async function POST(request) {
+  const newObj = await request.json();
+  Data.push(newObj);
+  return Response.json(Data);
 }
-
-
-
