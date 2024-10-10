@@ -12,9 +12,10 @@ export async function GET() {
 }
 
 export async function POST(request) { 
-  const newObj = request.json()
+  const newObj = await request.json()
   Data.push(newObj)
   return Response.json(Data)
 }
+
 
 
