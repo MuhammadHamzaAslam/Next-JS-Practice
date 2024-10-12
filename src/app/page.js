@@ -1,7 +1,7 @@
 import Image from "next/image";
 import "./globals.css";
 import { addTodo } from "./actions/todos";
-import Navbar from "@/components/Navbar";
+import Navbar from '@/components/Navbar';
 export default async function Home() {
   let todosApi = await fetch("http://localhost:3000/api/todos");
   todosApi = await todosApi.json();

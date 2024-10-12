@@ -1,6 +1,6 @@
-'use client'
-import { useState } from 'react';
-import Link from 'next/link';
+"use client";
+import { useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +56,7 @@ export default function Navbar() {
         {/* Links */}
         <div
           className={`lg:flex lg:items-center lg:space-x-6 text-white absolute lg:static top-16 left-0 w-full lg:w-auto bg-blue-600 lg:bg-transparent transition-all duration-300 ease-in-out ${
-            isOpen ? 'block' : 'hidden'
+            isOpen ? "block" : "hidden"
           }`}
         >
           <ul className="lg:flex lg:space-x-6 text-white text-center p-4 lg:p-0">
